@@ -1,0 +1,219 @@
+\documentclass{ecnuthesis}
+% \documentclass[printMode]{ecnuthesis}
+% 模版选项:
+% printMode     是否开启打印模式, 若缺省则为关闭, 反之则为开启
+% 用法示例
+% \documentclass[printMode]{ecnuthesis}   (开启打印模式, 适合双面打印)
+% \documentclass[printMode]{ecnuthesis}   (关闭打印模式, 适合提交电子版)
+
+\ecnuSetup {
+  % 参数设置
+  % 允许采用两种方式设置选项:
+  %   1. style/... = ...
+  %   2. style = { ... = ... } 
+  % 注意事项: 
+  %   1. 请勿在参数设置中出现空行
+  %   2. "=" 两侧的空格将被忽略
+  %   3. "/" 两侧的空格不会被忽略
+  %   4. 请使用英文逗号 "," 分隔选项
+  %
+  % info 类用于输入论文信息
+  info = {
+    title = {关于在数据科学与工程学院摸鱼的研究},
+    % 中文标题
+    %
+    titleEN = {Research on Fish Touching in the School of Data Science and Engineering},
+    % 英文标题
+    %
+    author = {钱院长的小迷弟},
+    % 作者姓名
+    %
+    studentID = {10185501xxx},
+    % 作者学号
+    %
+    department = {数据科学与工程学院},
+    % 学院名称
+    %
+    major = {数据科学与大数据技术},
+    % 专业名称
+    %
+    supervisor = {大橘猫},
+    % 指导教师姓名
+    %
+    academicTitle = {副研究员},
+    % 指导教师职称
+    %
+    year  = 2022,
+    % 论文完成年份
+    %
+    month = 5,
+    % 论文完成月份
+    %
+    keywords = {神经网络，摸鱼},
+    % 中文关键词
+    % 请使用英文逗号 "," 以分隔
+    %
+    keywordsEN = {Neural Networks, Fish Touching},
+    % 英文关键词
+    % 请使用英文逗号 "," 以分隔
+    %
+  },
+  % style 类用于简单设置论文格式
+  style = {
+    footnote  = plain,
+    % 脚注编号样式
+    % 可用选项:
+    %   footnote = plain|circled
+    % 说明:
+    %   plain     脚注的编号仅为数字
+    %   circled   脚注的编号为带圆圈数字 (仅限1-10)
+    %   (默认选项为 plain )
+    %
+    numbering = chinese,
+    % 章节编号样式
+    % 可用选项:
+    %   numbering = arabic|alpha|chinese
+    % 说明:
+    %   arabic    使用数字进行编号 (即理科要求)
+    %   alpha     使用字母进行编号 (即外文要求)
+    %   chinese   使用汉字进行编号 (即文科要求)
+    %   (默认选项为 arabic )
+    %
+    fontCJK = fandol,
+    % 中文字体选择
+    % 可用选项:
+    %   fontCJK = fandol|windows|mac|default
+    % 说明:
+    %   fandol    使用 TeX 自带的 fandol 字体
+    %   windows   使用 Windows 系统内的字体 (中易)
+    %   mac       使用 MacOS 系统内的字体
+    %   (默认选项为 fandol )
+    %
+    bibResource = {thesis-ref.bib},
+    % 参考文献数据源
+    % 由于使用的是 biber + biblatex , 所以必须明确给出 .bib 后缀名
+    %
+    logoResource = {./source/inner-cover(contains_font).eps},
+    % 封面插图数据源
+    % 模版已自带, 默认选项也已经设置为 ./source/inner-cover(contains_font).eps
+  }
+}
+
+
+
+% 需要的宏包可以自行调用
+\usepackage{mwe}
+
+\begin{document}
+
+% 设置前置部分编号
+\frontmatter
+
+% 中文摘要环境
+\begin{abstract}
+  
+ 这是摘要
+\end{abstract}
+
+% 英文摘要环境
+\begin{abstractEN}
+  
+ This is my abstract
+\end{abstractEN}
+
+% 设置正文编号
+\mainmatter
+
+\chapter{绪论}
+\section{背景与意义}
+% \subsection{简介}
+互联网的高速发展使得教育模式逐步信息化
+
+
+\section{研究内容}
+
+
+\section{组织结构}
+本文共分为1024个章节，内容如下所示
+
+% 新增：调整了itemize的间距
+调整了itemize的间距
+\begin{itemize}
+    \item 第1部分为绪论部分。
+    \item 第2部分主要对...
+    \item 第3部分为模型设计与实现，是本研究工作的核心。该部分详述了实验设计、环境、参数选择以及其他细节。
+    \item ...
+\end{itemize}
+
+\chapter{相关研究工作}
+
+\section{来张图片试试}
+
+% 新增：增加了双语Caption
+
+新增了双语Caption
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.2]{source/ecnu-dase.jpg}
+    \bicaption{\centering 数据科学与工程学院}{School of Data Science and Engineering}
+    % 如果中文/英文太长，可以使用 \centering 命令来控制其位置
+\end{figure}
+
+
+\section{来张表格试试}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{llll} 
+  & A & B & C \\
+  \hline complexity & $O(nd^{2})$ & $O({knd^{2}})$ & $O(n^{2}d)$ \\
+  \hline path & $O(1)$ & $O(n)$ & $O(n)$ \\
+\end{tabular}
+  \bicaption{一张很可爱的表格}{A very cute tabular}
+  \label{tab:my_label}
+\end{table}
+
+\section{来个引用试试}
+
+BERT\cite{devlin-etal-2019-bert}是一种神奇的模型，本文的引用格式为gb7714-2015
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=1.5]{source/bert_very_cute.png}
+    \bicaption{\centering 芝麻街}{Sesame Street}
+    % 如果中文/英文太长，可以使用 \centering 命令来控制其位置
+\end{figure}
+
+\chapter{模型设计与构建}
+
+\section{参数设置}
+
+\chapter{实验设计与分析}
+
+\section{实验设置}
+
+\section{数据来源}
+
+% 正文后部分
+\backmatter
+% 导入参考文献 (需要通过 latexmk 编译后才能显示)
+\printbibliography
+
+% 新增：导入未被引用的参考文献 (需要通过 latexmk 编译后才能显示)
+\nocite{zhang2021dive}
+\nocite{Goodfellow-et-al-2016}
+\nocite{qiu2020nndl}
+
+% 附录环境
+\begin{appendix}
+ 感谢数据科学与工程学院的老师对我的栽培。
+\end{appendix}
+
+% 致谢环境
+\begin{acknowledgement}
+
+感谢数据科学与工程学院\footnote{http://dase.ecnu.edu.cn/}的老师对我的栽培。
+\end{acknowledgement}
+
+\end{document}
