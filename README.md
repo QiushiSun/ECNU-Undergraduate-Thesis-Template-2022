@@ -14,6 +14,9 @@
 6. 调整 itemize 环境中的条目之间的间距
 7. 使用了gb7714-2015引用规范
 
+更新：
+1. 添加了生僻字支持，字体地址：https://github.com/micmro/Stylify-Me/blob/master/.fonts/SimSun.ttf（若出现了生僻字输出错误再安装该字体）
+
 ## 说明
 
 ### Attention is all You need

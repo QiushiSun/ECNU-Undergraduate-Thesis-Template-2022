@@ -6,6 +6,10 @@
 % \documentclass[printMode]{ecnuthesis}   (开启打印模式, 适合双面打印)
 % \documentclass[printMode]{ecnuthesis}   (关闭打印模式, 适合提交电子版)
 
+
+% \setCJKfamilyfont{simsun}{SimSun.ttf}
+% \newcommand{\SimSun}{\CJKfamily{simsun}}
+
 \ecnuSetup {
   % 参数设置
   % 允许采用两种方式设置选项:
@@ -25,6 +29,8 @@
     titleEN = {Research on Fish Touching in the School of Data Science and Engineering},
     % 英文标题
     %
+    % 如果名字包含生僻字导致输出错误，请注释掉line34，取消注释line33，将名字输入在“包含生僻字的名字”，字体获取见README.md
+    % author = {\CJKfontspec{SimSun.ttf}[AutoFakeBold = {3.17}]{包含生僻字的名字}},
     author = {钱院长的小迷弟},
     % 作者姓名
     %
