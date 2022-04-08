@@ -15,7 +15,8 @@
 7. 使用了gb7714-2015引用规范
 
 更新：
-1. 添加了生僻字支持，字体地址：https://github.com/micmro/Stylify-Me/blob/master/.fonts/SimSun.ttf（若出现了生僻字输出错误再安装该字体）
+1. 2022/3/30：添加了生僻字支持，字体地址：https://github.com/micmro/Stylify-Me/blob/master/.fonts/SimSun.ttf（若出现了生僻字输出错误再安装该字体）
+2. 2022/4/8：修正了section/subsection/subsubsection后出现多余"."的问题，并添加了此部分示例
 
 ## 说明
 
