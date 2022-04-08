@@ -478,8 +478,7 @@
             },
             subsection = {
               name    = {,},
-              number  = 
-                {\arabic{chapter}.\arabic{section}.\arabic{subsection}},
+              number  = {\arabic{chapter}.\arabic{section}.\arabic{subsection}},
               format        = ,
               titleformat   = \sffamily\zihao{-4},
               numberformat  = \zihao{-4},
@@ -510,24 +509,23 @@
           {
             chapter = {
               name    = {,、},
-            %   number  = \chinese{chapter},
               number  = \arabic{chapter},
               format  = \sffamily\zihao{-4},
               aftername  = \ ,
             },
             section = {
-              name    = {,.},
-            %   number  = \chinese{section},
+              name    = {,\hspace{1pt}},
               number  = \arabic{chapter}.\arabic{section},
               format  = \sffamily\zihao{-4},
               aftername  = \ ,
             }, 
             subsection = {
-              name    = {,.},
+              name    = {,\hspace{0pt}},
               number  = \arabic{chapter}.\arabic{section}.\arabic{subsection},
               format        = ,
               titleformat   = \sffamily\zihao{-4},
               numberformat  = \zihao{-4},
+              aftername  = \ ,
             }, 
             subsubsection = {
               name    = {(,)},
@@ -535,6 +533,7 @@
               format        = ,
               titleformat   = \sffamily\zihao{-4},
               numberformat  = \zihao{-4},
+              aftername  = \ ,
             }, 
             paragraph = {
               name    = {,)},
