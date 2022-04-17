@@ -2,7 +2,7 @@
 \RequirePackage{expl3}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=black,hidelinks}
-
+\usepackage{pdfpages}
 \GetIdInfo $Id: ecnuthesis.cls 0.1 2021-01-31 12:00:00Z Koyamin <koyafumin@gmail.com> $
   {Undergraduate Thesis Template for East China Normal University}
 \ProvidesExplClass{\ExplFileName}
@@ -668,10 +668,10 @@
 \PassOptionsToPackage 
   {
     backend   = biber,
-    % style     = gb7714,
     style     = gb7714-2015,
     seconds   = true,
     hyperref  = true,
+    gbpub = false
   } 
   { biblatex }
 \RequirePackage { biblatex }
@@ -1124,6 +1124,11 @@
     \addtocontents{toc}{\protect\thispagestyle{empty}}
     \tableofcontents
   }
+  
+\NewDocumentCommand \makeIntegrity { }
+  {
+    \includepdf[]{Integrity.pdf}
+  }
 
 \AtBeginDocument
   {
@@ -1138,8 +1143,10 @@
       \makecoveri
     \end{titlepage}
     \restoregeometry
+    \makeIntegrity %创建诚信书
     \makeTOC
   }
+  
 
 \NewDocumentCommand \frontmatter { }
   {
