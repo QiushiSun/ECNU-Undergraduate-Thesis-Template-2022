@@ -95,7 +95,7 @@
     top       = 2.5 cm, 
     bottom    = 2.0 cm, 
     left      = 3.0 cm, 
-    right     = 2.0 cm,
+    right     = 2.5 cm,
     footskip  = 0.7 cm
   }
 \cs_new_protected:Npn \__ecnu_appto_cmd:Nn #1#2
